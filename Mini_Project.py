@@ -26,7 +26,7 @@ class Library():
     def return_book(self,book,author):
         if book in self.list_of_books:
             if self.lend_data[book] is not None:
-                self.lend_data.pop(book)
+                self.lend_data[book]= None
             else:
                 print("Sorry but This book is not Lend")
         else:
